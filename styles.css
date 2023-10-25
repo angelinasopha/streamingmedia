@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: #020659;
+    width: 375px;
+    margin: 0 auto;
+}
+body {
+    font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+    margin: 0 auto;
+    color: #ffffff;
+}
+header h1 {
+    background-color:#2104d9;
+}
+h1 {
+    font-size: 1.25em;
+    line-height: 2em;
+}
+h2, h3 {
+    font-size: 1em;
+    font-variant: all-small-caps;
+    line-height: 2em;
+    color: #590242;
+}
+nav ul #title {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+nav ul li {
+    font-variant: all-small-caps;
+    list-style: none;
+    text-decoration: none;
+}
+/* #nav nav{
+    background: linear-gradient(to right, #020873, #030A8C);
+} */
+p,dl, dd{
+    font-size: 1em;
+}
+dl{
+    display: flex;
+}
+dt{
+    padding-right: 5px;
+}
+#greeting {
+    background: linear-gradient(to right, #030A8C, #000000);
+}
+#greeting p{
+    padding: 15px;
+}
+#greeting h2{
+    padding-top: 15px;
+    padding-left: 15px;
+}   
+.scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+.scroll div {
+    position: absolute;
+    top: 240px;
+    color:#590242;
+    background-color: rgba(255, 255, 255, .7);
+    padding: 5px;
+    width: 311px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+.playlists {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: #2699FB;
+}
+.playlists section {
+    margin: 10px;
+    position: relative;
+    background-color: #0d8dfb;
+}
+#playlist h2 {
+    background-color: #ffffff;
+}
+#playlist a {
+    background-color: #590242;
+    color: #ffffff;
+    position: relative;
+    margin-left: 15px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+#playlistsbutton{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #ffffff;
+}
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+    opacity: .5;
+}
+.curated {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: #030A8C;
+}
+.curated section {
+    margin: 10px;
+    position: relative;
+    background-color: #020873;
+}
+#created h2{
+    background-color: #ffffff;
+}
+#created a{
+    background-color: #590242;
+    color: #ffffff;
+    position: relative;
+    margin-left: 15px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+#createdbutton{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #ffffff;
+}
+#trending {
+    background-color:#ffffff;
+}
+#trending h2 {
+    font-variant: all-small-caps;
+    padding: 15px;
+}
+#trending a{
+    background-color: #590242;
+    color: #ffffff;
+    position: relative;
+    margin-left: 15px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+#trendingbutton{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer{
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: #ffffff;
+}
+footer p {
+    font-size: .75em;
+    text-align: center;
+    color:#590242;
+}
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+} 
