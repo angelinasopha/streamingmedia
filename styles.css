@@ -26,18 +26,42 @@ h2, h3 {
     line-height: 2em;
     color: #590242;
 }
+nav {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #020873, #030A8C);
+}
 nav ul #title {
     font-variant: small-caps;
     font-weight: bold;
+    color: #ffffff;
+}
+#title a{
+    color: #ffffff;
+    font-size: 2em;
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-left: 37px;
+    align-items: center;
+    justify-content: center;
 }
 nav ul li {
     font-variant: all-small-caps;
     list-style: none;
     text-decoration: none;
+    color: #ffffff;
 }
-/* #nav nav{
-    background: linear-gradient(to right, #020873, #030A8C);
-} */
+a{
+    text-decoration: none;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+#nav {
+    order: -1;
+}
 p,dl, dd{
     font-size: 1em;
 }
@@ -47,15 +71,21 @@ dl{
 dt{
     padding-right: 5px;
 }
+dl dt{
+    font-style: italic;
+}
 #greeting {
     background: linear-gradient(to right, #030A8C, #000000);
 }
 #greeting p{
-    padding: 15px;
+    padding: 25px;
+    padding-top: 0;
 }
 #greeting h2{
-    padding-top: 15px;
-    padding-left: 15px;
+    padding-top: 10px;
+    padding-left: 25px;
+    font-size: 2em;
+    color: #ffffff;
 }   
 .scroll {
     display: grid;
@@ -67,6 +97,10 @@ dt{
     margin: 10px;
     position: relative;
 }
+/* .scroll h3{
+    font-size: 1.5em;
+    font-weight: bold;
+} */
 .scroll div {
     position: absolute;
     top: 240px;
@@ -91,6 +125,20 @@ dt{
 }
 #playlist h2 {
     background-color: #ffffff;
+    font-size: 1.25em;
+    padding: 25px;
+    padding-bottom: 0px;
+}
+#playlist h3{
+    text-align:center;
+    font-size: 1.6em;
+    color:#ffffff;
+    line-height: 1em;
+    padding-bottom: 1em;
+}
+#playlist p{
+    text-align: center;
+    padding-bottom: 15px;
 }
 #playlist a {
     background-color: #590242;
@@ -126,6 +174,16 @@ audio {
 }
 #created h2{
     background-color: #ffffff;
+    padding: 25px;
+    padding-bottom: 0px;
+    font-size: 1.25em;
+}
+#created h3{
+    text-align:center;
+    font-size: 1.6em;
+    color:#ffffff;
+    line-height: 1em;
+    padding-bottom: 1em;
 }
 #created a{
     background-color: #590242;
@@ -135,6 +193,10 @@ audio {
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
+}
+#created p{
+    text-align: center;
+    padding-bottom: 15px;
 }
 #createdbutton{
     padding-top: 20px;
@@ -146,7 +208,12 @@ audio {
 }
 #trending h2 {
     font-variant: all-small-caps;
-    padding: 15px;
+    padding: 25px;
+    padding-bottom: 0px;
+    font-size: 1.25em;
+}
+#trending h3{
+    font-size: 1.25em;
 }
 #trending a{
     background-color: #590242;
@@ -173,7 +240,7 @@ footer p {
 }
 ul {
     overflow: hidden;
-    max-height: 0;
+    max-height: 50px;
     transition: max-height .2s ease-out;
 }
 label {
@@ -236,4 +303,36 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     label span, input {
         display: none;
     }
-} 
+    label {
+        visibility: hidden;
+    }
+    html {
+        width: 834px;
+    }
+    #title a{
+        padding-left: 20px;
+    }
+    #navsection {
+        text-align: center;
+        padding: 15px 20px;
+    } 
+    #nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #020873, #030A8C);
+    }
+    #nav ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav ul {
+        padding-top: 1em;
+    }
+    #navsection a{
+        color: #ffffff;
+        font-size: 1.3em;
+    }
+    
+}   
+    
